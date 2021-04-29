@@ -1,4 +1,7 @@
 <meta>
+	<info author='JeViCo' name='Test menu' />
+	<oop>true</oop>
+
 	<!-- Client -->
 	<script src='utils.lua' type='client' cache='false' />
 	<script src='ui_main.lua' type='client' cache='false' />
