@@ -1,0 +1,13 @@
+<meta>
+	<!-- Client -->
+	<script src='utils.lua' type='client' cache='false' />
+	<script src='ui_main.lua' type='client' cache='false' />
+
+	<!-- Files -->
+	<file src='assets/images/circle.png' type='client' />
+	<file src='assets/images/icon_1.png' type='client' />
+	<file src='assets/images/icon_2.png' type='client' />
+	<file src='assets/images/icon_3.png' type='client' />
+	<file src='assets/images/icon_4.png' type='client' />
+	<file src='assets/images/icon_5.png' type='client' />
+</meta>
