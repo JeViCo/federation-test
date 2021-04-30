@@ -1,10 +1,18 @@
 local scx, scy = guiGetScreenSize( )
+local adapt = scy/1080
 local tocolor = tocolor
 local menuData = { }
 local menuState, onMenuAppear, onPlayerWasted -- Прототипы
 
 local min = math.min
 local max = math.max
+
+local allowAdapt = {
+	offset = true,
+	cRadius = true,
+	imgRadius = true,
+	contentOffset = true
+}
 
 local menuConfig =
 {
@@ -38,6 +46,11 @@ local menuConfig =
 	}
 }
 menuConfig.rotAmount = 360 / menuConfig.count
+for prop in pairs( menuConfig ) do
+	if allowAdapt[ prop ] then
+		menuConfig[ prop ] = menuConfig[ prop ] * adapt
+	end
+end
 
 function menuManager( state )
 	if menuData.lock then return end
@@ -147,7 +160,7 @@ function renderMenu( )
 			sect.y + ( menuConfig.imgRadius/2 + cOffset ) * gScale,
 			sect.x + menuConfig.imgRadius/1.75 * gScale,
 			sect.y + ( menuConfig.imgRadius/2 + cOffset ) * gScale,
-			tocolor( 0, 0, 0, cAlpha, 255 ), cScale * 0.5 + 1, -- adapt
+			tocolor( 0, 0, 0, cAlpha, 255 ), ( cScale * 0.5 + 1 ) * adapt, -- adapt
 			'default', 'center', 'center'
 		)
 
