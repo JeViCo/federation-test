@@ -17,15 +17,14 @@ local allowAdapt = {
 local menuConfig =
 {
 	count = 5, -- Количество секций
-	offset = 200, -- Расстояние от центра экрана до центра секции (adapt)
-	cRadius = 150, -- Радиус круга (adapt)
-	imgRadius = 68, -- Размер иконки (adapt)
-	contentOffset = 10, -- adapt
-	--borderOffset = 30, -- adapt
+	offset = 200, -- Расстояние от центра экрана до центра секции
+	cRadius = 150, -- Радиус круга
+	imgRadius = 68, -- Размер иконки
+	contentOffset = 10,
 	animTime = 500, -- Время на анимацию при наведении
 	animEasing = 'OutBack', -- Тип анимации при наведении
 	appearTime = 250, -- Время на появление секции
-	appearEasing = 'OutBack',
+	appearEasing = 'OutBack', -- Тип анимации при появлении секции
 	content =
 	{
 		{
@@ -160,7 +159,7 @@ function renderMenu( )
 			sect.y + ( menuConfig.imgRadius/2 + cOffset ) * gScale,
 			sect.x + menuConfig.imgRadius/1.75 * gScale,
 			sect.y + ( menuConfig.imgRadius/2 + cOffset ) * gScale,
-			tocolor( 0, 0, 0, cAlpha, 255 ), ( cScale * 0.5 + 1 ) * adapt, -- adapt
+			tocolor( 0, 0, 0, cAlpha, 255 ), ( cScale * 0.5 + 1 ) * adapt,
 			'default', 'center', 'center'
 		)
 
