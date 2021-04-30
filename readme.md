@@ -1,0 +1,1 @@
+Пример реализации меню https://codepen.io/dbenmore/full/ExVxeyv

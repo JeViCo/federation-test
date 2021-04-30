@@ -35,8 +35,7 @@ function dxCreateTransition( bool, from, to, time, easing )
 		time = time or 1000,
 		tick = getTickCount( ),
 		easing = easing or 'Linear',
-		startPoint = from, endPoint = to,
-		timer = Timer( triggerEvent, time, 1, 'onDxTransitionOver', resourceRoot, ID )
+		startPoint = from, endPoint = to
 	}
 
 	if bool then

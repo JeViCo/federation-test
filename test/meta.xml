@@ -8,6 +8,7 @@
 
 	<!-- Files -->
 	<file src='assets/images/circle.png' type='client' />
+	<file src='assets/images/ring.png' type='client' />
 	<file src='assets/images/icon_1.png' type='client' />
 	<file src='assets/images/icon_2.png' type='client' />
 	<file src='assets/images/icon_3.png' type='client' />
